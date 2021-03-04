@@ -1,0 +1,24 @@
+const marks = {
+    mass: 78,
+    heigh: 1.69,
+    lastName: "Millers",
+
+    bmi: function () {
+        return (this.mass / (this.heigh ** 2))
+    }
+}
+
+const john = {
+    mass: 92,
+    heigh: 1.95,
+    lastName: "Smith",
+
+    bmi: function () {
+        return (this.mass / (this.heigh ** 2));
+    }
+}
+
+const final = john.bmi() > marks.bmi() ? `John ${john.lastName} BMI (${john.bmi()}) is higher than Mark ${marks.lastName} (${marks.bmi()})` : `Mark ${marks.lastName} BMI (${marks.bmi()}) is higher than John's (${john.bmi()}).`;
+
+console.log(final);
+
